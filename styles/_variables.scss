@@ -1,0 +1,20 @@
+// Base sizing in rem (html root is 62.5% -> 1rem = 10px)
+$base-rem: 10px;
+@function rem($px) {
+  @return #{$px / 10}rem;
+}
+
+// Colors
+$color-primary: #0b63b8;
+$color-accent: #f0a500;
+$color-bg: #ffffff;
+$color-text: #222222;
+
+// Spacing scale
+$space-xxs: rem(4);
+$space-xs: rem(8);
+$space-sm: rem(12);
+$space-md: rem(16);
+$space-lg: rem(24);
+$space-xl: rem(32);
+

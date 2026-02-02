@@ -1,0 +1,34 @@
+// Breakpoints for the requested device sizes (in px) - use rem helper rem() from _variables
+$breakpoints: (
+  'desktop-4k-vertical': 3840,
+  'desktop-2560-1440': 2560,
+  'desktop-2560-1080': 2560,
+  'desktop-1920-1080': 1920,
+  'desktop-1600-900': 1600,
+  'desktop-1440-900': 1440,
+  'desktop-1366-768': 1366,
+  'desktop-1280-720': 1280,
+  'tablet-1024-1366': 1366,
+  'tablet-1024-640': 1024,
+  'ipad-air-820-1180': 820,
+  'ipad-768-1024': 768,
+  'iphone-8plus-414-736': 414,
+  'galaxy-s5-360-640': 360,
+  'iphone-se-320-568': 320
+);
+
+// Helpers for media queries using max-width (mobile-first approach is recommended)
+@function to-rem($px) {
+  @return #{$px / 10}rem;
+}
+
+@mixin respond-max($px) {
+  @media (max-width: #{to-rem($px)}) { @content; }
+}
+
+@mixin respond-min($px) {
+  @media (min-width: #{to-rem($px)}) { @content; }
+}
+
+// Example usage (leave commented as guidance):
+// .example { font-size: 1.6rem; @include respond-max(768) { font-size: 1.4rem; } }
