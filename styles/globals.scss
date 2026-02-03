@@ -1,6 +1,6 @@
 @import './_variables.scss';
 @import './_responsive.scss';
-@import './components/_sections.scss';
+@import './components/_sections.module.scss';
 @import './components/_navbar.module.scss';
 
 html {
@@ -15,7 +15,7 @@ body {
   font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
   background: $color-bg;
   color: $color-text;
-  font-size: 1.6rem; /* 16px base */
+  font-size: 1.6rem;
   line-height: 1.4;
 }
 
