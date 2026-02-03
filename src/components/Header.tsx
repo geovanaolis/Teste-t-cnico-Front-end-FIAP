@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../styles/components/_sections.scss';
+import '../../styles/components/_sections.module.scss';
 
 export default function Header() {
   return (
