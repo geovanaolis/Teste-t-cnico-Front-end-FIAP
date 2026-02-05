@@ -18,16 +18,13 @@ export default function Navbar() {
 
   return (
     <header className={styles.navbar} role="navigation" aria-label="Main navigation">
-      <div className={styles.brand}>FIAP</div>
-      <nav className={styles.links} aria-hidden="false">
-        <a href="#intro">Intro</a>
-        <a href="#cursos">Cursos</a>
-        <a href="#faq">FAQ</a>
-      </nav>
+      <div role="img" className={styles.brand} aria-label="Logo FIAP" />
 
-      <div className={styles.progressWrapper} aria-hidden="true">
+      <div className={styles.progressWrapper} aria-hidden="true"> 
         <div className={styles.progress} style={{ width: `${progress}%` }} />
       </div>
     </header>
   );
 }
+
+//Tag img não utilizada para melhor controle de estilos e por se tratar de um elemento SVG não reconhece.

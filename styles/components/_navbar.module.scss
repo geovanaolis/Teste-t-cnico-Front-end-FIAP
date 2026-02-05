@@ -6,28 +6,21 @@
   left: 0;
   right: 0;
   height: 6.4rem;
-  display: flex;
+  display: flex; 
+  justify-content: center; 
   align-items: center;
-  justify-content: space-between;
+  background: rgba(0, 0, 0, 0.98);
   padding: 0 1rem;
-  background: rgba(255,255,255,0.98);
-  border-bottom: 1px solid rgba(0,0,0,0.04);
   z-index: 9999;
 }
 
 .brand {
-  font-weight: 700;
-  font-size: 1.8rem;
-}
-
-.links {
-  display: flex;
-  gap: 1rem;
-  a {
-    color: vars.$color-text;
-    text-decoration: none;
-    font-size: 1.6rem;
-  }
+  width: 120px;
+  height: 40px;
+  background-image: url('../../assets/svgs/logo-fiap.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .progressWrapper {
@@ -36,7 +29,7 @@
   left: 0;
   right: 0;
   height: 0.4rem;
-  background: rgba(0,0,0,0.05);
+  background: #000000;
 }
 
 .progress {
