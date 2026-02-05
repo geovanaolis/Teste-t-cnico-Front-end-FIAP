@@ -80,9 +80,135 @@
   }
 }
 
-.section {
-  background: transparent;
-  h2 { font-size: 2.4rem; margin-bottom: 0.75rem; }
-  p { font-size: 1.6rem; }
+.intro {
+  overflow: hidden;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2.5rem;
 }
+
+.intro hr {
+  border: none;
+  height: 0.125rem;
+  background-color: $color-text;
+  width: 100vw;
+}
+
+.marquee {
+  display: flex; 
+  flex-wrap: nowrap;
+  width: max-content;
+  will-change: transform;
+}
+
+.marquee h2,
+.marquee p {
+  position: relative;
+  display: inline-block;
+  width: max-content;
+  transform: translateX(0);
+  font-weight: lighter;
+  white-space: nowrap;
+  padding-inline: 2rem;
+}
+
+.imagem {
+  width: 70%;
+  height: 100vh;
+  background-image: url('../../assets/imgs/intro.png');
+  background-size: cover;
+  background-position: center;
+  margin-left: 25rem;
+
+  @include respond-max(1920) {
+    width: 70%; // 100%
+    margin-left: 25rem;
+  }
+
+  @include respond-max(1366) {
+    width: 75%; // ~85%
+    margin-left: 15rem;
+  }
+
+  @include respond-max(1024) {
+    width: 85%; // ~70%
+    margin-left: auto;
+    margin-right: auto;
+    height: 80vh;
+  }
+
+  @include respond-max(768) {
+    width: 100%; // ~50%
+    margin-left: 0;
+    height: 60vh;
+  }
+
+  @include respond-max(414) {
+    width: 100%; // ~40%
+    height: 45vh;
+    background-position: top center;
+  }
+}
+
+.marquee2 {
+  display: flex; 
+  flex-wrap: nowrap;
+  width: max-content;
+  will-change: transform;
+
+  p {
+    position: relative;
+    display: inline-block;
+    width: max-content;
+    transform: translateX(0);
+
+    font-weight: 400;
+    font-size: 9rem;
+
+    white-space: nowrap;
+
+    color: black;
+
+    -webkit-text-stroke: 0.125rem #545555;
+
+    text-shadow: 0 0 0.063rem rgba(84, 85, 85, 0.8);
+
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@include respond-max(1920) {
+  .marquee h2,
+  .marquee p {
+    font-size: 4rem;
+  }
+}
+
+@include respond-max(1024) {
+  .marquee h2,
+  .marquee p {
+    font-size: 3rem;
+  }
+}
+
+@include respond-max(768) {
+  .marquee h2,
+  .marquee p {
+    font-size: 2.4rem;
+    padding-inline: 1.5rem;
+  }
+}
+
+@include respond-max(414) {
+  .marquee h2,
+  .marquee p {
+    font-size: 1.8rem;
+    padding-inline: 1rem;
+  }
+}
+
+
 
